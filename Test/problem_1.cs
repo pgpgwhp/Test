@@ -109,6 +109,11 @@ public class LeaderboardSystem
         {
             return new List<int>(scores);
         }
+
+        if (scores.Length == 0)
+        {
+            return new List<int>(scores);
+        }
         
         Heap heap = new Heap();
         foreach (var score in scores)
@@ -132,13 +137,28 @@ public class LeaderboardSystemTests
 {
 
     public void TestGetTopScores()
-    {
+    {   
+        // 正常情况
         int[] numbers = { 2, 20, 3, 208, 883, 771, 972 };
         int target = 3;
 
         List<int> l = LeaderboardSystem.GetTopScores(numbers, target);
-        
         Console.WriteLine(string.Join(" , ", l));
-// 在这⾥编写测试⽤例
+        
+        // 边界测试
+       numbers = new []{ 3 };
+       target = 5; 
+       l = LeaderboardSystem.GetTopScores(numbers, target);
+       Console.WriteLine(string.Join(" , ", l));
+
+       numbers = new int[0];
+       target = 0; 
+       l = LeaderboardSystem.GetTopScores(numbers, target);
+       Console.WriteLine(string.Join(" , ", l));
+       
+       //
+
+       
+       // 在这⾥编写测试⽤例
     }
 }

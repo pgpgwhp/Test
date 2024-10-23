@@ -28,7 +28,8 @@ public class TreasureHuntSystem
 public class TreasureHuntSystemTests
 {
     public void TestMaxTreasureValue()
-    {
+    {   
+        // dp可以计算负值
         int[] treasures = { 3, 1, 5, 2 , 4};
         Console.WriteLine(TreasureHuntSystem.MaxTreasureValue(treasures)); 
 // 在这⾥编写测试⽤例

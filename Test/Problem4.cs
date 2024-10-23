@@ -71,7 +71,9 @@ public class TalentAssessmentSystemTests
         int[] iceAbility = { 2, 4, 8, 10, 12, 14 };
         
         Console.WriteLine(TalentAssessmentSystem.FindMedianTalentIndex(fireAbility, iceAbility));
-
+        // 多个有序数组，是采用一次归并多个数组计算的，与该方法类似
+        
+        
         // 在这⾥编写测试⽤例
     }
 }
